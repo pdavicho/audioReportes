@@ -22,6 +22,12 @@ from reportlab.platypus import Image
 from datetime import datetime
 import io
 
+import imageio_ffmpeg
+
+# Añadir la ruta del ejecutable ffmpeg al PATH
+ffmpeg_path = imageio_ffmpeg.get_ffmpeg_exe()
+os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
+
 st.set_page_config(page_title='Speech To Text', page_icon=':studio_microphone:', layout="wide")
 
 # Inicializar session state
