@@ -9,6 +9,12 @@ from typing import List, Tuple, Dict
 from dataclasses import dataclass
 import io
 
+import imageio_ffmpeg
+
+# Añadir la ruta del ejecutable ffmpeg al PATH
+ffmpeg_path = imageio_ffmpeg.get_ffmpeg_exe()
+os.environ["PATH"] += os.pathsep + os.path.dirname(ffmpeg_path)
+
 st.set_page_config(
     page_title="Recortar Audios Extensos", 
     page_icon="✂️", 
