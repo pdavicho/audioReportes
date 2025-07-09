@@ -4,3 +4,4 @@ streamlit==1.37.1
 streamlit_tags==1.2.8
 ffmpeg-python
 reportlab
+imageio-ffmpeg
